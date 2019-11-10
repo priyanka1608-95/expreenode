@@ -1,0 +1,26 @@
+
+<br>
+<legend>Edit Employee</legend>
+
+<div class="form-group">
+    <label for="id">No</label>
+    <input [(ngModel)]="emps.id" type="text" class="form-control" id="No" name="id">
+</div>
+
+<div class="form-group">
+    <label for="name">Name</label>
+    <input  [(ngModel)]="emps.name" type="text" class="form-control" id="Name" name="name">
+</div>
+
+<div class="form-group">
+    <label for="address">Address</label>
+    <input  [(ngModel)]="emps.address" type="text" class="form-control" id="Address" name="address">
+</div>
+
+<button type="button" (click)="Update()" class="btn btn-primary">Update</button>
+
+<span>
+    {{message}}
+</span>
+
+

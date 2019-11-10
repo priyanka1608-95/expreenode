@@ -1,0 +1,30 @@
+
+
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.address}}</td>
+        <td>
+          <button type="button" routerLink="/edit/{{emp.id}}" class="btn btn-block btn-danger">edit</button>
+        <td>
+          
+          <button type="button" (click)="delete(emp.id)" class="btn btn-block btn-danger">delete</button>
+          
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button (click)="GoToRegister()" type="button" class="btn btn-primary">Add new record</button>
